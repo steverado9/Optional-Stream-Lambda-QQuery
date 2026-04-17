@@ -1,0 +1,11 @@
+    Why Use Optional?
+Traditionally, null values in Java have led to countless NullPointerExceptions,
+often in places where the absence of a value wasn't clearly indicated.
+Optional makes it explicit when a value might be missing, promoting better readability and safer code.
+            Best Practices
+1. Use Optional for return types-not fields or parameters.
+2. Prefer Optional.empty() over null
+3. Use ofNullable() when the value might be null
+4. Throw exceptions intentionally with orElseThrow(), You can even use orElseThrow() without arguments in Java 10+
+
+

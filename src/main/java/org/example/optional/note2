@@ -1,0 +1,21 @@
+Java 8 introduced the Optional class in the java.util package to handle the problem of null values more gracefully
+Instead of risking NullPointerException (NPE),
+Optional provides a container object that may or may not hold a non-null value.
+    Creating Optional Objects
+-Optional.empty(): Returns an empty Optional.
+-Optional.of(value): Returns an Optional containing the given non-null value.
+-Optional.ofNullable(value): Returns an Optional describing the value if non-null, otherwise empty
+    Common Methods in Optional
+1.empty() : Returns an empty Optional instance
+2.of(value): Returns an Optional with the specified present non-null value.
+3.ofNullable(value): Returns an Optional describing the specified value if non-null, else empty.
+4.equals(object): Checks if another object is "equal to" this Optional.
+5.filter(): If a value is present and matches the predicate, returns an Optional with the value; else returns empty.
+6.flatMap(): If a value is present, applies a mapping function that returns an Optional; otherwise returns empty.
+7.get(): Returns the value if present, else throws NoSuchElementException.
+8.ifPresent(): Returns true if a value is present, else false.
+9.map(): If a value is present, applies the mapping function and returns an Optional describing the result (if non-null).
+10.orElse(): Returns the value if present, otherwise returns the provided default value.
+11.orElseGet(): Returns the value if present, otherwise invokes the supplier and returns its result.
+12.orElseThrow(): Returns the value if present, otherwise throws an exception provided by the supplier.
+

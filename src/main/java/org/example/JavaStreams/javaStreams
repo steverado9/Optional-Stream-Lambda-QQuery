@@ -1,0 +1,4 @@
+What are Java Streams?
+When working with a data set, you can apply set-based methods to transform the collection into a new final result.
+Streams are a declarative approach to data processing,
+focusing on clear intent communicated through a chain of method calls.

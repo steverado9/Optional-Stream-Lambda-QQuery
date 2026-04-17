@@ -1,0 +1,28 @@
+A lambda expression is a short block of code that takes in parameters and returns a value.
+Lambdas look similar to methods.
+but they do not need a name, and they can be written right inside a method body.
+    Syntax
+The simplest lambda expression contains a single parameter and an expression.
+    parameter -> expression
+To use more than one parameter, wrap them in parentheses
+    (parameter1, parameter2) -> expression
+Simple expressions must return a value immediately. They cannot contain multiple statements, such as loops or if conditions.
+
+    Using Lambda Expressions
+Lambdas are often passed as arguments to methods.
+For example, you can use a lambda in the forEach() method of an ArrayList
+
+    Lambdas in Variables
+A lambda expression can be stored in a variable.
+The variable's type must be an interface with exactly one method (a functional interface).
+The lambda must match that method's parameters and return type.
+Java includes many built-in functional interfaces, such as Consumer (from the java.util package) used with lists.
+
+    Lambdas as Method Parameters
+You can also pass a lambda expression to a method.
+The method's parameter must be a functional interface.
+Calling the interface's method will then run the lambda expression.
+
+    Anonymous Class vs. Lambda Expression
+you can often replace an anonymous class with a lambda expression
+but only if the interface is a functional interface (one abstract method).
