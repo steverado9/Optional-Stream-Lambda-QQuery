@@ -26,3 +26,34 @@ Calling the interface's method will then run the lambda expression.
     Anonymous Class vs. Lambda Expression
 you can often replace an anonymous class with a lambda expression
 but only if the interface is a functional interface (one abstract method).
+
+
+What is a Lambda Expression?
+A lambda expression is essentially an anonymous function.
+That is a function without a name and access modifiers.
+It is used to implement a functional interface (an interface with exactly one abstract method).
+    Example of functional interface
+@FunctionalInterface
+interface Greeting {
+    void sayHello(String name);
+}
+
+    Lambda Expression Syntax
+(parameters) -> {body}
+-Parameters: Input parameters for the lambda function.
+-Arrow Token (->): Separates the parameter list and the body.
+-Body: The code to be executed.
+    Why Use Lambda Expressions?
+1.Conciseness: Reduce boilerplate code for anonymous classes.
+2.Improved Readability: Focus on the logic instead of the structure.
+3.Functional Programming: Enhance code flexibility with higher-order functions.
+4.Stream API Integration: Easily work with Java Streams for functional-style operations.
+    Functional Interfaces and Lambda Expressions
+Lambda expressions can only be used with functional interfaces.
+A functional interface in Java is an interface containing exactly one abstract method,
+known as a Single Abstract Method (SAM), which allows it to be implemented using lambda expressions.
+Here are some commonly used ones:
+1.Predicate
+Represents a boolean-valued function of one argument.
+2.Consumer
+Represents an operation that takes a single input argument and returns no result.

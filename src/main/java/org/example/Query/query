@@ -1,0 +1,12 @@
+The @Query annotation in Spring Data JPA is used to define custom queries.
+using JPQL (Java Persistence Query Language) or native SQL.
+This annotation allows you to write complex queries and perform operations that may not be possible with standard method naming conventions.
+
+In the applications.yml
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+Create the Repository Interface
+define custom queries using the @Query annotation.
+
+@Query: Defines custom queries using JPQL or native SQL.

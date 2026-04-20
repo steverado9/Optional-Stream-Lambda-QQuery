@@ -1,0 +1,38 @@
+Streams are not data structures but tools for performing operations.
+This functionality—java.util.stream—supports functional-style operations on streams of elements.
+    Java Stream Creation
+We can create a stream from individual objects using Stream.of() Or simply using Stream.builder():
+    Java Stream Operations
+1.forEach: it loops over the stream elements, calling the supplied function on each element.
+forEach() is a terminal operation, which means that, after the operation is performed, the stream pipeline is considered consumed, and can no longer be used.
+2.map: map() produces a new stream after applying a function to each element of the original stream.
+3.collect: it’s one of the common ways to get stuff out of the stream once we are done with all the processing.
+4.filter: This produces a new stream that contains elements of the original stream that pass a given test (specified by a predicate).
+5.findFirst: findFirst() returns an Optional for the first entry in the stream. The Optional can, of course, be empty.
+6.toArray: If we need to get an array out of the stream, we can simply use toArray().
+7.peek:  it performs the specified operation on each element of the stream and returns a new stream that can be used further.
+        Method Types and Pipelines
+ Java stream operations are divided into intermediate and terminal operations.
+Intermediate operations such as filter() return a new stream on which further processing can be done.
+Terminal operations, such as forEach(), mark the stream as consumed, after which point it can no longer be used further.
+    short-circuiting operations.
+Short-circuiting operations allow computations on infinite streams to be completed in finite time:
+    Lazy Evaluation
+All intermediate operations are lazy, so they’re not executed until a result of processing is needed.
+    Comparison-Based Stream Operations
+1.sorted() operation—this sorts the stream elements based on the comparator passed we pass into it.
+2.min() and max() return the minimum and maximum element in the stream respectively, based on a comparator.
+3.distinct: does not take any argument and returns the distinct elements in the stream, eliminating duplicates.
+4.allMatch, anyMatch, and noneMatch
+These operations all take a predicate and return a boolean.
+
+    Java Stream Specializations
+a Stream is a stream of object references
+However, there are also the IntStream, LongStream, and DoubleStream
+which are primitive specializations for int, long and double respectively.
+These are quite convenient when dealing with a lot of numerical primitives.
+    Specialized Operations
+Specialized streams provide additional operations as compared to the standard Stream—which are quite convenient when dealing with numbers.
+For example sum(), average(), range() etc.
+    Reduction Operations
+A reduction operation (also called a fold) takes a sequence of input elements and combines them into a single summary result by repeated application of a combining operation.
